@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 INICIAR AQUI - Sistema SENAI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #003C78 0%, #0066CC 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #003C78, #0066CC);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #003C78;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF6600;
+        }
+
+        .step {
+            background: #F9FAFB;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #FF6600;
+        }
+
+        .step h3 {
+            color: #FF6600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .code {
+            background: #1F2937;
+            color: #10B981;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #FF6600;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 10px 10px 10px 0;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #CC5200;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 102, 0, 0.3);
+        }
+
+        .btn-primary {
+            background: #003C78;
+        }
+
+        .btn-primary:hover {
+            background: #002850;
+        }
+
+        .alert {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .alert h4 {
+            color: #92400E;
+            margin-bottom: 8px;
+        }
+
+        .alert p {
+            color: #78350F;
+        }
+
+        .credentials {
+            background: #DBEAFE;
+            border: 2px solid #3B82F6;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .credentials h3 {
+            color: #1E40AF;
+            margin-bottom: 15px;
+        }
+
+        .credential-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: white;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        .credential-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .credential-value {
+            font-family: 'Courier New', monospace;
+            color: #1E40AF;
+            background: #EFF6FF;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .footer {
+            background: #F3F4F6;
+            padding: 30px;
+            text-align: center;
+            color: #6B7280;
+        }
+
+        .checklist {
+            background: #D1FAE5;
+            border: 2px solid #10B981;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .checklist h3 {
+            color: #065F46;
+            margin-bottom: 15px;
+        }
+
+        .checklist-item {
+            padding: 8px 0;
+            color: #064E3B;
+        }
+
+        .checklist-item::before {
+            content: '✓ ';
+            color: #10B981;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 SISTEMA PRONTO!</h1>
+            <p>Sistema de Gerenciamento SENAI Alagoinhas - Hackathon 2025</p>
+        </div>
+
+        <div class="content">
+            <!-- PASSO 1 -->
+            <div class="section">
+                <h2>📥 1. INSTALAÇÃO (5 minutos)</h2>
+
+                <div class="step">
+                    <h3>1.1 Iniciar XAMPP</h3>
+                    <p>Abra o XAMPP Control Panel e inicie:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; color: #6B7280;">
+                        <li>✅ Apache (porta 80)</li>
+                        <li>✅ MySQL (porta 3306)</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3>1.2 Criar Banco de Dados</h3>
+                    <p>Acesse o phpMyAdmin:</p>
+                    <div class="code">http://localhost/phpmyadmin</div>
+                    <p style="margin-top: 10px;">1. Clique em "Novo"<br>
+                        2. Nome: <strong>senai_manutencao</strong><br>
+                        3. Clique em "Importar"<br>
+                        4. Selecione: <strong>database.sql</strong><br>
+                        5. Clique em "Executar"</p>
+                </div>
+
+                <div class="step">
+                    <h3>1.3 Testar Instalação</h3>
+                    <p>Abra o navegador e acesse:</p>
+                    <div class="code">http://localhost/senai-manutencao</div>
+                    <p style="margin-top: 10px;">✅ Se a página inicial aparecer, instalação OK!</p>
+                </div>
+            </div>
+
+            <!-- CREDENCIAIS -->
+            <div class="section">
+                <h2>🔐 2. CREDENCIAIS</h2>
+
+                <div class="credentials">
+                    <h3>👤 Administrador</h3>
+                    <div class="credential-item">
+                        <span class="credential-label">Matrícula:</span>
+                        <span class="credential-value">admin</span>
+                    </div>
+                    <div class="credential-item">
+                        <span class="credential-label">Senha:</span>
+                        <span class="credential-value">1234</span>
+                    </div>
+                </div>
+
+                <div class="credentials">
+                    <h3>👥 Solicitantes (Exemplos)</h3>
+                    <div class="credential-item">
+                        <span class="credential-label">Prof. João Silva:</span>
+                        <span class="credential-value">2024001</span>
+                    </div>
+                    <div class="credential-item">
+                        <span class="credential-label">Prof. Maria Santos:</span>
+                        <span class="credential-value">2024002</span>
+                    </div>
+                    <p style="margin-top: 10px; color: #6B7280; font-size: 14px;">
+                        💡 Solicitantes podem criar conta no primeiro acesso (apenas nome e matrícula)
+                    </p>
+                </div>
+            </div>
+
+            <!-- ACESSO RÁPIDO -->
+            <div class="section">
+                <h2>⚡ 3. ACESSO RÁPIDO</h2>
+
+                <a href="http://localhost/senai-manutencao" class="btn btn-primary" target="_blank">
+                    🌐 Abrir Sistema
+                </a>
+
+                <a href="http://localhost/phpmyadmin" class="btn" target="_blank">
+                    🗄️ phpMyAdmin
+                </a>
+
+                <a href="APRESENTACAO.md" class="btn">
+                    🎤 Roteiro Apresentação
+                </a>
+
+                <a href="TESTE-FINAL.md" class="btn">
+                    ✅ Checklist de Testes
+                </a>
+            </div>
+
+            <!-- CHECKLIST -->
+            <div class="section">
+                <h2>✅ 4. CHECKLIST PRÉ-APRESENTAÇÃO</h2>
+
+                <div class="checklist">
+                    <h3>Verificar antes de apresentar:</h3>
+                    <div class="checklist-item">XAMPP rodando (Apache + MySQL)</div>
+                    <div class="checklist-item">Banco de dados importado</div>
+                    <div class="checklist-item">Sistema abrindo em localhost</div>
+                    <div class="checklist-item">Login admin funcionando (admin / 1234)</div>
+                    <div class="checklist-item">Dashboard carregando gráficos</div>
+                    <div class="checklist-item">Criar solicitação testado</div>
+                    <div class="checklist-item">Exportar relatório testado</div>
+                    <div class="checklist-item">Dark mode funcionando</div>
+                    <div class="checklist-item">Cache do navegador limpo</div>
+                    <div class="checklist-item">Roteiro de apresentação memorizado</div>
+                </div>
+            </div>
+
+            <!-- FLUXO DEMONSTRAÇÃO -->
+            <div class="section">
+                <h2>🎬 5. FLUXO DA DEMONSTRAÇÃO (3min)</h2>
+
+                <div class="step">
+                    <h3>0:00-0:30 | Introdução</h3>
+                    <p>Apresentar o problema atual (solicitações por WhatsApp) e a solução (sistema centralizado)</p>
+                </div>
+
+                <div class="step">
+                    <h3>0:30-1:00 | Criar Solicitação</h3>
+                    <p>1. Clicar "Solicitante"<br>
+                        2. Preencher: Nome, Matrícula<br>
+                        3. Criar nova solicitação<br>
+                        4. Anexar imagem<br>
+                        5. Ver em "Minhas Solicitações"</p>
+                </div>
+
+                <div class="step">
+                    <h3>1:00-1:45 | Dashboard Admin</h3>
+                    <p>1. Fazer logout<br>
+                        2. Login admin (admin / 1234)<br>
+                        3. Mostrar dashboard com gráficos<br>
+                        4. Abrir solicitação<br>
+                        5. Atualizar status<br>
+                        6. Adicionar comentário</p>
+                </div>
+
+                <div class="step">
+                    <h3>1:45-2:15 | Banco de Dados</h3>
+                    <p>1. Abrir phpMyAdmin<br>
+                        2. Mostrar 5 tabelas<br>
+                        3. Destacar relacionamentos<br>
+                        4. Mostrar dados inseridos</p>
+                </div>
+
+                <div class="step">
+                    <h3>2:15-3:00 | Diferenciais</h3>
+                    <p>✅ Gráficos Chart.js<br>
+                        ✅ Export PDF/CSV<br>
+                        ✅ Dark Mode<br>
+                        ✅ Upload de Imagens<br>
+                        ✅ Segurança (CSRF, SQL Injection, bcrypt)<br>
+                        ✅ Código limpo MVC</p>
+                </div>
+            </div>
+
+            <!-- DOCUMENTAÇÃO -->
+            <div class="section">
+                <h2>📚 6. DOCUMENTAÇÃO COMPLETA</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">📖 README.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">Documentação geral do projeto</p>
+                    </div>
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">🚀 INSTALL.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">Guia completo de instalação</p>
+                    </div>
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">🎤 APRESENTACAO.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">Roteiro de 3 minutos</p>
+                    </div>
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">🔐 CREDENCIAIS.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">Usuários e senhas</p>
+                    </div>
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">✅ TESTE-FINAL.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">150+ testes</p>
+                    </div>
+                    <div style="background: #F3F4F6; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #003C78; margin-bottom: 8px;">🏆 RESUMO-EXECUTIVO.md</h4>
+                        <p style="font-size: 13px; color: #6B7280;">Visão geral completa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALERTA -->
+            <div class="alert">
+                <h4>⚠️ IMPORTANTE ANTES DA APRESENTAÇÃO</h4>
+                <p>
+                    1. Teste o fluxo completo pelo menos 3 vezes<br>
+                    2. Tenha uma segunda aba do navegador aberta como backup<br>
+                    3. Memorize as credenciais: admin / 1234<br>
+                    4. Prepare uma imagem para upload<br>
+                    5. Limpe o cache do navegador (Ctrl + Shift + Delete)<br>
+                    6. Cronometre sua apresentação (máximo 3 minutos)
+                </p>
+            </div>
+
+            <!-- SUPORTE -->
+            <div class="section">
+                <h2>🆘 7. PROBLEMAS COMUNS</h2>
+
+                <div style="background: #FEE2E2; padding: 20px; border-radius: 12px; border-left: 4px solid #EF4444;">
+                    <h4 style="color: #991B1B; margin-bottom: 15px;">❌ Página em branco</h4>
+                    <p style="color: #7F1D1D; margin-bottom: 8px;"><strong>Causa:</strong> Apache não está rodando ou
+                        erro de PHP</p>
+                    <p style="color: #7F1D1D;"><strong>Solução:</strong> Verificar XAMPP e ver erros em
+                        C:\xampp\apache\logs\error.log</p>
+                </div>
+
+                <div
+                    style="background: #FEE2E2; padding: 20px; border-radius: 12px; border-left: 4px solid #EF4444; margin-top: 15px;">
+                    <h4 style="color: #991B1B; margin-bottom: 15px;">❌ Não conecta ao banco</h4>
+                    <p style="color: #7F1D1D; margin-bottom: 8px;"><strong>Causa:</strong> MySQL não está rodando ou
+                        banco não foi importado</p>
+                    <p style="color: #7F1D1D;"><strong>Solução:</strong> Verificar MySQL no XAMPP e reimportar
+                        database.sql</p>
+                </div>
+
+                <div
+                    style="background: #FEE2E2; padding: 20px; border-radius: 12px; border-left: 4px solid #EF4444; margin-top: 15px;">
+                    <h4 style="color: #991B1B; margin-bottom: 15px;">❌ Login não funciona</h4>
+                    <p style="color: #7F1D1D; margin-bottom: 8px;"><strong>Causa:</strong> Usuário admin não foi criado
+                    </p>
+                    <p style="color: #7F1D1D;"><strong>Solução:</strong> Reimportar database.sql ou executar no
+                        phpMyAdmin:<br>
+                        <code
+                            style="background: white; padding: 8px; display: block; margin-top: 8px; border-radius: 4px;">
+                        UPDATE usuarios SET senha_hash = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' WHERE matricula = 'admin';
+                    </code>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3 style="color: #003C78; margin-bottom: 15px;">🏆 SISTEMA 100% PRONTO!</h3>
+            <p>Todos os requisitos obrigatórios + extras implementados</p>
+            <p>Código profissional, seguro e bem documentado</p>
+            <p style="margin-top: 20px; font-size: 14px;">
+                © 2025 SENAI Alagoinhas - Hackathon 2025<br>
+                <strong>BOA SORTE NA APRESENTAÇÃO! 🚀</strong>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

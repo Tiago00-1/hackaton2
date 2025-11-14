@@ -1,0 +1,594 @@
+/*
+===============================================================================
+SISTEMA DE GERENCIAMENTO DE TI E MANUTENÇÃO - SENAI ALAGOINHAS
+CSS Responsivo - Mobile First Approach
+===============================================================================
+*/
+
+/* ===== BREAKPOINTS ===== */
+/*
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+- Large Desktop: > 1200px
+*/
+
+/* ===== BASE MOBILE (< 768px) ===== */
+@media (max-width: 767px) {
+    /* Layout Geral */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    /* Header */
+    .header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .header-logo img {
+        height: 35px;
+    }
+
+    .header-title {
+        font-size: 14px;
+    }
+
+    .header-subtitle {
+        display: none;
+    }
+
+    .header-user {
+        font-size: 12px;
+    }
+
+    .header-user .user-name {
+        display: none;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        width: 280px;
+        height: calc(100vh - 60px);
+        background: var(--bg-color);
+        box-shadow: var(--shadow-xl);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .sidebar.show + .sidebar-overlay {
+        display: block;
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px;
+    }
+
+    /* Cards */
+    .card {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .card-header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .card-actions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* Stats Cards */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    /* Formulários */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Botões */
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+        border-radius: var(--border-radius-sm);
+        margin-bottom: 8px;
+    }
+
+    /* Tabelas */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 600px;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 6px;
+    }
+
+    /* Ocultar colunas menos importantes em mobile */
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* Modais */
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+        margin: 5vh auto;
+    }
+
+    .modal-header {
+        padding: 15px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .modal-footer {
+        padding: 15px;
+        flex-direction: column-reverse;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Filtros */
+    .filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Dashboard */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gráficos */
+    .chart-container {
+        height: 250px;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-icon {
+        width: 30px;
+        height: 30px;
+        left: 0;
+    }
+
+    /* Badges */
+    .badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    /* Alerts */
+    .alert {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    /* Pagination */
+    .pagination {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagination-item {
+        margin: 3px;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px;
+    }
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Layout */
+    .container {
+        max-width: 720px;
+        padding: 20px;
+    }
+
+    /* Header */
+    .header {
+        height: 65px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 240px;
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 240px;
+        padding: 20px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Formulários */
+    .form-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .form-group {
+        flex: 1;
+    }
+
+    /* Tabelas */
+    table {
+        font-size: 13px;
+    }
+
+    /* Dashboard */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gráficos */
+    .chart-container {
+        height: 300px;
+    }
+
+    /* Botões */
+    .btn-group {
+        flex-direction: row;
+    }
+
+    .btn-group .btn {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    /* Menu Toggle */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* ===== DESKTOP (> 1024px) ===== */
+@media (min-width: 1025px) {
+    /* Layout */
+    .container {
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    /* Header */
+    .header {
+        height: 70px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 280px;
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 280px;
+        padding: 30px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Dashboard */
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Gráficos */
+    .chart-container {
+        height: 350px;
+    }
+
+    /* Tabelas */
+    .table-responsive {
+        overflow-x: visible;
+    }
+
+    /* Hover Effects */
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Menu Toggle */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* ===== LARGE DESKTOP (> 1200px) ===== */
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .main-content {
+        margin-top: 50px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .modal-content {
+        max-height: 85vh;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .header,
+    .sidebar,
+    .btn,
+    .modal,
+    .toast,
+    .no-print {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    table {
+        page-break-inside: auto;
+    }
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000;
+        --text-color: #000;
+        --bg-color: #fff;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ===== DARK MODE PREFERENCE ===== */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-color: #0F172A;
+        --bg-secondary: #1E293B;
+        --bg-tertiary: #334155;
+        --text-color: #F1F5F9;
+        --text-secondary: #CBD5E1;
+        --border-color: #475569;
+    }
+}
+
+/* ===== UTILITIES RESPONSIVAS ===== */
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .show-mobile {
+        display: block;
+    }
+    
+    .hide-mobile {
+        display: none;
+    }
+}
+
+.show-tablet {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .show-tablet {
+        display: block;
+    }
+    
+    .hide-tablet {
+        display: none;
+    }
+}
+
+.show-desktop {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .show-desktop {
+        display: block;
+    }
+    
+    .hide-desktop {
+        display: none;
+    }
+}
+
+/* ===== GRID RESPONSIVO ===== */
+.responsive-grid {
+    display: grid;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .responsive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== FIM DO ARQUIVO ===== */

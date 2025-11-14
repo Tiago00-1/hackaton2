@@ -1,0 +1,4 @@
+{"timestamp":"2025-11-14 19:08:52","message":"Iniciando criação de usuário","context":{"data":{"nome":"jose","matricula":"123456","email":"jose@gmail.com","setor_id":3,"tipo_usuario":"solicitante","senha_hash":null},"admin":"admin"}}
+{"timestamp":"2025-11-14 19:17:01","message":"Iniciando criação de usuário","context":{"data":{"nome":"jose","matricula":"123456","email":"jose@gmail.com","setor_id":3,"tipo_usuario":"solicitante","senha_hash":null},"admin":"admin"}}
+{"timestamp":"2025-11-14 19:22:37","message":"Iniciando criação de usuário","context":{"data":{"nome":"joes","matricula":"12345","email":"ljose@gmail.com","cargo":"","setor_id":4,"tipo_usuario":"solicitante","senha_hash":null},"admin":"admin"}}
+{"timestamp":"2025-11-14 19:22:46","message":"Iniciando criação de usuário","context":{"data":{"nome":"joes","matricula":"12345","email":"ljose@gmail.com","cargo":"","setor_id":4,"tipo_usuario":"solicitante","senha_hash":null},"admin":"admin"}}
